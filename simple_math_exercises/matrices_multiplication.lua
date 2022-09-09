@@ -1,14 +1,13 @@
 
 function matrices_multiplication(rows_num1, cols_num1, rows_num2, cols_num2)
 
-     if rows_num1 ~= rows_num2 then
-          return "Number of rows must be equal! Yours are: ".. rows_num1 .. " and " .. rows_num2
+     if cols_num1 ~= rows_num2 then
+          return "Number of columns in 1st matrix must be equal to the number of rows in the 2nd matrix! Yours are: ".. rows_num1 .. " and " .. rows_num2
      else
           arr1 = {}
-          
-          -- Create local counter for more user friendly input.
+          arr2 = {}
 
-          local counter1 = 1
+          local counter1 = 1 -- Create local counter for more user friendly input.
 
           -- Adding to the 1st matrix all values from user.
 
@@ -21,12 +20,8 @@ function matrices_multiplication(rows_num1, cols_num1, rows_num2, cols_num2)
                end
           end
 
-          arr2 = {}
-
-          -- Create local counter for more freindly user input.
-
           io.write("\n")
-          local counter2 = 1
+          local counter2 = 1 -- Create local counter for more user freindly input.
 
           -- Adding to the 2nd matrix all values from user.
 
@@ -39,10 +34,8 @@ function matrices_multiplication(rows_num1, cols_num1, rows_num2, cols_num2)
                end
           end
 
-          -- Create new matrix that will be serve as result of multiplication.
-
           io.write("\n")
-          result = {}
+          result = {} -- Create new table that will be serve as container for the result of our multiplication.
 
           -- Multiplying matricies - arr1 * arr2.
 

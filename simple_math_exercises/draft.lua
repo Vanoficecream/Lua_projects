@@ -5,11 +5,9 @@ function read_line(rows, cols)
     for i = 1, rows do
         arr[i] = {}
         counter = 1 
-        io.input("text.txt")
+        io.input("text1.txt")
         for j = 1, cols do
-            io.write("The value of ".. counter .. " is: ")
             arr[i][j] = (io.read("*n"))
-            io.write(" ")
             counter = counter + 1
         end
     end
